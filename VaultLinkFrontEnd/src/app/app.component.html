@@ -1,0 +1,14 @@
+<!-- <h1>Welcome</h1> -->
+
+<div class="main">
+    <div class="left">
+        <app-app-header *ngIf="!isLoggedIn && !isAdminLoggedIn"></app-app-header>
+        <app-clientheader  *ngIf="isLoggedIn && !isAdminLoggedIn"></app-clientheader>
+        <app-admin-header *ngIf="!isLoggedIn && isAdminLoggedIn"></app-admin-header>
+    </div>
+    <div class="right">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+

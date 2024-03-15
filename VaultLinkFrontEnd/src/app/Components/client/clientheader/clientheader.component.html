@@ -1,0 +1,18 @@
+<!-- <p>clientheader works!</p> -->
+
+<div class="main">
+    <div class="profile" (click)="gotourl('profile')">
+        <div class="icon-item">
+            <mat-icon>account_circle</mat-icon>
+        </div>
+        <div class="uname">{{user.firstName + ' ' + user.lastName}}</div>
+    </div>
+    <hr />
+    <div (click)="gotourl('clienthome')" [class.selected]="url === '/clienthome'">Home</div>
+    <div (click)="gotourl('clientbalance')" [class.selected]="url === '/clientbalance'">Balance</div>
+    <div (click)="gotourl('clientdeposite')" [class.selected]="url === '/clientdeposite'">Online Deposit</div>
+    <div (click)="gotourl('clienttransferamount')" [class.selected]="url === '/clienttransferamount'">Online Transfer Amount</div>
+    <div (click)="gotourl('clienthistory')" [class.selected]="url === '/clienthistory'">Transaction History</div>
+    <div (click)="gotourl('profile')" [class.selected]="url === '/profile'">Profile</div>
+    <div (click)="gotourl('logout')" [class.selected]="url === '/logout'">Logout</div>
+</div>

@@ -1,0 +1,24 @@
+.heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+.heading .mat-icon{
+    cursor: pointer;
+}
+
+.profile-update-div {
+    display: flex;
+    justify-content: center;
+}
+.center-div {
+    text-align: center;
+    margin-top: 20px;
+}
+table  {
+    border-collapse:separate; 
+    border-spacing: 0 1em;
+}
+.heading  .text-item {
+    margin-left: 40%;
+}

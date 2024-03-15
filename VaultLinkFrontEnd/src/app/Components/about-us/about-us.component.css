@@ -1,0 +1,44 @@
+h1 {
+    text-align: center;
+    background-image: radial-gradient( circle 759px at -6.7% 50%, rgba(80,131,73,1) 0%, rgba(140,209,131,1) 26.2%, rgba(178,231,170,1) 50.6%, rgba(144,213,135,1) 74.1%, rgba(75,118,69,1) 100.3% );
+    padding: 15px;
+}
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .item {
+    border: 1px solid #ffc107;
+    background: #ffc10752;
+    margin: 20px;
+    padding: 20px;
+}
+.icon-label .mat-icon {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.icon-label {
+    display: flex;
+}
+.icon-label {
+    width: 35px;
+    height: 35px;
+    background: #ffc107c2;
+    border-radius: 100%;
+}
+.icon-label div {
+    align-self: center;
+}
+h5 {
+    margin-left: 20px;
+    font-size: 20px;
+    min-width: 200px;
+}
+span {
+    margin-top: 32px;
+    display: block;
+}

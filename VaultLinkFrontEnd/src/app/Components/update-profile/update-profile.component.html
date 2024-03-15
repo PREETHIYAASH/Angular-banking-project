@@ -1,0 +1,52 @@
+<!-- <p>update-profile works!</p> -->
+
+<div class="heading">
+    <div><h1>
+        Update Profile
+    </h1></div>
+    <div><mat-icon (click)="closeDialog()">close</mat-icon></div>
+</div>
+
+<div class="profile-update-div">
+    <table style="table-layout:fixed;">
+        <tr>
+            <td><b>FirstName</b>:</td>
+            <td><input type="text" [(ngModel)]="user.firstName"/></td>
+        </tr>
+        <tr>
+            <td><b>LastName</b>:</td>
+            <td><input type="text" [(ngModel)]="user.lastName"/></td>
+        </tr>
+        <tr>
+            <td><b>Address</b>:</td>
+            <td><input type="text" [(ngModel)]="user.address" /></td>
+        </tr>
+        <tr>
+            <td><b>Email</b>:</td>
+            <td><input type="text" [(ngModel)]="user.email" disabled/></td>
+        </tr>
+        <tr>
+            <td><b>Mobile</b>:</td>
+            <td><input type="text" [(ngModel)]="user.mobileno" disabled/></td>
+        </tr>
+        <tr>
+            <td><b>Gender</b>:</td>
+            <td>
+                <select class="form-control" id="gender" [(ngModel)]="user.gender" name="gender" disabled>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="nonbinary">Non-binary</option>
+                  </select>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Dob</b>:</td>
+            <td><input type="date" [(ngModel)]="user.dob" max={{minDate}} disabled/></td>
+        </tr>
+       
+    </table>
+    
+</div>
+<div class="center-div">
+    <button  class="submit-button" (click)="update()">Update</button>
+</div>

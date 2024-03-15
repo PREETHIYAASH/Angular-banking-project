@@ -1,0 +1,73 @@
+<!-- <p>login works!</p> -->
+
+<div class="outer-container">
+    <div class="login-container">
+      <div class="login-box">
+       
+        <div class="right-panel">
+          <form class="login-form" [formGroup]="loginForm" >
+            <h2>User Login</h2>
+  
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" class="form-control" formControlName="username" name="username" required>
+              <div *ngIf="loginForm.controls['username'].invalid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)"
+              class="error-message">
+              <div *ngIf="loginForm.controls['username'].errors?.['required']">
+               username should not blank
+            </div>
+            
+            </div>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" class="form-control"  formControlName="pass" name="password" required>
+              <div *ngIf="loginForm.controls['pass'].invalid && (loginForm.controls['pass'].dirty || loginForm.controls['pass'].touched)"
+              class="error-message">
+              <div *ngIf="loginForm.controls['pass'].errors?.['required']">
+               Password should not blank
+            </div>
+            <div *ngIf="loginForm.controls['pass'].errors?.['minlength']">
+                Password must have 8 characters
+            </div>
+            </div>
+            </div>
+            <button type="submit" class="btn-block submit-button" (click)="onSubmit()" [disabled]="!loginForm.controls['pass'].valid || !loginForm.controls['username'].valid">Login</button>
+            <button class="btn-block submit-button" routerLink="/home">Back</button>
+        <p class="text-center mt-3 link-text"(click)="showForgotPasswordOverlay()">Forgot password?</p>
+            <p class="text-center mt-3">Don't have an account? <a routerLink="/register" class="link-text">Create</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+    <!-- "Forgot Password" Overlay -->
+    <div class="overlay" *ngIf="showForgotPassword">
+      <div class="overlay-content">
+        <h2>Forgot Password</h2>
+        <div *ngIf="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </div>
+        <form (ngSubmit)="onForgotPasswordSubmit()">
+          <div class="form-group">
+            <label for="forgotUsername">Username</label>
+            <input type="text" id="forgotUsername" class="form-control" [(ngModel)]="user.username" name="forgotUsername" required>
+          </div>
+          <div class="form-group">
+            <label for="forgotPassword">New Password</label>
+            <input type="password" id="forgotPassword" class="form-control" [(ngModel)]="user.pass" name="forgotPassword" required>
+          </div>
+          <div class="form-group">
+            <label for="forgotConfirmPassword">Confirm New Password</label>
+            <input type="password" id="forgotConfirmPassword" class="form-control" [(ngModel)]="user.cpass" name="forgotConfirmPassword" required>
+          </div>
+          <div class="btn-container">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-secondary" (click)="hideForgotPasswordOverlay()">Cancel</button>
+           
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

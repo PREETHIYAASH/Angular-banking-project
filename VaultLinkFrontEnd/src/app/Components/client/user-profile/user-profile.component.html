@@ -1,0 +1,55 @@
+<!-- <p>user-profile works!</p> -->
+
+<div >
+    <div class="profile-form">
+      <div > <!-- Add a div for the profile bar -->
+        <h1>Your Profile</h1>
+      </div>
+        
+      <div class="tablediv">
+        <table border="1" style="table-layout:fixed;">
+           
+            <tr>
+                <td><b>AccountNumber</b></td>
+                <td>{{ accountNumber }}</td>
+            </tr>
+            <tr>
+                <td><b>First Name</b></td>
+                <td>{{ user.firstName }}</td>
+            </tr>
+            <tr>
+                <td><b>Last Name</b></td>
+                <td>{{ user.lastName }}</td>
+            </tr>
+            <tr>
+                <td><b>Gender</b></td>
+                <td>{{ user.gender }}</td>
+            </tr>
+            <tr>
+                <td><b>Dob</b></td>
+                <td>{{ user.dob }}</td>
+            </tr>
+            <tr>
+              <td><b>Mobile</b></td>
+              <td>{{ user.mobileno }}</td>
+          </tr>
+            <tr>
+              <td><b>Address</b></td>
+              <td>{{ user.address }}</td>
+          </tr>
+            <tr>
+                <td><b>Email</b></td>
+                <td>{{ user.email }}</td>
+            </tr>
+            <tr>
+                <td><b>User Name</b></td>
+                <td>{{ user.username }}</td>
+            </tr>
+        </table>
+      </div>
+      <div class="center-align">
+        <button  class="submit-button" (click)="openProfileDialog()">Update</button>
+      </div>
+    
+    </div>
+  </div>

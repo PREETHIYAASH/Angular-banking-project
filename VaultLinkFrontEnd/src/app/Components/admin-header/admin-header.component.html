@@ -1,0 +1,12 @@
+<!-- <p>admin-header works!</p> -->
+
+<div class="main">
+    <div class="profile" >
+        <div class="icon-item">
+            <mat-icon>account_circle</mat-icon>
+        </div>
+        <div class="uname">{{userName}}</div>
+    </div>
+    <div (click)="gotourl('adminDashboard')" [class.selected]="url === '/adminDashboard'">Home</div>
+    <div (click)="gotourl('logout')" [class.selected]="url === '/logout'">Logout</div>
+</div>

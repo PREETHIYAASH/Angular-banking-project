@@ -1,0 +1,49 @@
+.profile-form table, th, td {
+    border: 2px solid green;
+      font-size: 18px;
+      width: 300px;
+    }
+    .profile-bar {
+      background: #FFFFFF;
+      color: #000000;
+    }
+  
+    .tablediv {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .center-align {
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    table {
+      border-collapse: collapse;
+        font-family: Tahoma, Geneva, sans-serif;
+    }
+    table td {
+      padding: 15px;
+    }
+    table thead td {
+      background-color: #54585d;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 13px;
+      border: 1px solid #54585d;
+    }
+    table tbody td {
+      color: #636363;
+      border: 1px solid #dddfe1;
+    }
+    table tbody tr {
+      background-color: #f9fafb;
+    }
+    table tbody tr:nth-child(odd) {
+      background-color: #ffffff;
+    }
+    h1 {
+      text-align: center;
+      background-image: radial-gradient( circle 759px at -6.7% 50%, rgba(80,131,73,1) 0%, rgba(140,209,131,1) 26.2%, rgba(178,231,170,1) 50.6%, rgba(144,213,135,1) 74.1%, rgba(75,118,69,1) 100.3% );
+      padding: 15px;
+  }

@@ -1,0 +1,27 @@
+<!-- <p>account-information works!</p> -->
+
+<div class="heading">
+    <div class="text-item">
+        <h1>
+            Account Detail
+        </h1>
+    </div>
+    <div><mat-icon (click)="closeDialog()">close</mat-icon></div>
+</div>
+<div class="profile-update-div">
+    <table style="table-layout:fixed;">
+        <tr>
+            <td><b>Account Number</b>:</td>
+            <td>{{data?.accountNum}}</td>
+        </tr>
+        <tr>
+            <td><b>Account Balance</b>:</td>
+            <td>{{data?.accountBal}}</td>
+        </tr>
+        <div class="centeritem">
+            <button  class="submit-button" (click)="download()">Download</button>
+            <button  class="submit-button" (click)="print()">Print</button>
+          </div>
+    </table>
+    
+</div>

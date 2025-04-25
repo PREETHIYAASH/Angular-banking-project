@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.bank.entity.User;
 
-public interface UserService {
+//public interface UserService {
 	public User getUserById(Integer id);
 	public User registerUser(User user);
 	public void deleteUserById(Integer id);
